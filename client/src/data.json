@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "computer",
+        "title": "playing",
+        "price": 20,
+        "size": ["S", "L"],
+        "description": "Help to have fun",
+        "imgURL": "/img/cmoputer.jpg"
+    },
+    {
+        "id": 2,
+        "name": "mouse",
+        "title": "controal",
+        "price": 50,
+        "size": ["XL", "L"],
+        "description": "Help to have fun",
+        "imgURL": "/img/mouse.jpg"
+    },
+    {
+        "id": 3,
+        "name": "phone",
+        "title": "play and call another pepole",
+        "price": 30,
+        "size": ["S", "M"],
+        "description": "Help to have fun",
+        "imgURL": "/img/phone.jpg"
+    },
+    {
+        "id": 4,
+        "name": "saber",
+        "title": "contral all compoter",
+        "price": 90,
+        "size": ["XL", "M", "S"],
+        "description": "Help to have fun",
+        "imgURL": "/img/saber.jpg"
+    }
+]
