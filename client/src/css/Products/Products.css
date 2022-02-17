@@ -1,0 +1,7 @@
+.modal-size {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background-color: rgba(199, 111, 111, 0.4);
+  border-radius: 8px;
+}

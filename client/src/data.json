@@ -6,7 +6,7 @@
         "price": 20,
         "size": ["S", "L"],
         "description": "Help to have fun",
-        "imgURL": "/img/cmoputer.jpg"
+        "imgURL": "/img/computer.jpg"
     },
     {
         "id": 2,
