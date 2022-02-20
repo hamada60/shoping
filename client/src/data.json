@@ -31,7 +31,7 @@
         "name": "saber",
         "title": "contral all compoter",
         "price": 90,
-        "size": ["XL", "M", "S"],
+        "size": ["XL", "M"],
         "description": "Help to have fun",
         "imgURL": "/img/saber.jpg"
     }
