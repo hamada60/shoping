@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import '../../css/Products/Products.css';
 
 
-export default function Products({products}) {
+export default function Products({products, addToCart}) {
 
     const [product, setProduct] = useState("");
 
@@ -30,7 +30,7 @@ export default function Products({products}) {
                             <li className="list-group-item">{product.size[0]} - {product.size[1]}</li>
                         </ul>
                         <div className="d-grid ">
-                            <button className="btn btn-primary" type="button">Add To Cart</button>
+                            <button className="btn btn-primary" type="button" onClick={ () => addToCart(product) }>Add To Cart</button>
                         </div>
                         
                     </div>
