@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Provider } from 'react-redux';
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
@@ -7,6 +8,7 @@ import data from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Cart from "./components/Cart/Cart";
+import store from "./store/store";
 
 
 function App() {
@@ -66,29 +68,31 @@ function App() {
     setCartItems(cartItemsClone.filter( item => item.id != product.id ))
   }
 
-  useEffect( () => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }
-  , [cartItems] )
+  // useEffect( () => {
+  //   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  // }
+  // , [cartItems] )
 
   return (
-    <div className="layout">
-      <Header />
-      <main>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <Products products={products} addToCart={addToCart} />
-            </div>
-            <div class="col-md-4">
-              <Filter products={products} productsNumber={products.length} handelFilterBySize={handelFilterBySize} size={size} handelFilterBySort={handelFilterBySort} sort={sort} />
+    <Provider store={store}>
+      <div className="layout">
+        <Header />
+        <main>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <Products products={products} addToCart={addToCart} />
+              </div>
+              <div class="col-md-4">
+                <Filter products={products} productsNumber={products.length} handelFilterBySize={handelFilterBySize} size={size} handelFilterBySort={handelFilterBySort} sort={sort} />
+              </div>
             </div>
           </div>
-        </div>
-        <Cart cartItem={cartItems} removeFromCart={removeFromCart} />
-      </main>
-      <Footer />
-    </div>
+          <Cart cartItem={cartItems} removeFromCart={removeFromCart} />
+        </main>
+        <Footer />
+      </div>
+    </Provider>
   );
 }
 
